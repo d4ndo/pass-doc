@@ -143,7 +143,7 @@ Unverzichtbar ist der »gpg-agent«. Dieser verwaltet die GnuPG-Schlüssel und l
 
 [7] NIST: http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf
 
-[8] passff: https://github.com/jvenant/passff
+[8] passff: https://passb.github.io/
 
 [9] dmenu: https://de.wikipedia.org/wiki/Dwm#dmenu
 
