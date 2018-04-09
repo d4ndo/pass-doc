@@ -19,7 +19,7 @@ pass init »gpg_id1 gpg_id2«
 Dies ermöglicht das gemeinsame verwalten und teilen von Passwörtern in einer Projektgruppe. Wenn nicht sowieso schon GnuPG für das verschlüsselen der E-mails unter den Projektteilnehmern verwendet wird, dann sollten sich die Teilnehmer mit dem Konzept des "Web of Trust" und der Schlüsselverwaltung vertraut machen. Denn das verifizieren und signieren der öffentlichen Schlüssel vermeidet störende, aber auch berechtigte Warnmeldungen seitens GnuPG. Neue Projektteilnehmer können auch nachträglich hinzugefügt werden. pass verschlüsselt dann die ausgewählten Kennworteinträge neu. Die Datei ».gpg-id«, im Arbeitsverzeichnis von password-store, listet alle Schlüssel auf mit denen verschlüsselt wurde. Ebenfalls können Unterverzeichnisse mit der Option »-p« separat mit mehreren Schlüsseln kodiert werden. So kann der Zugriff auf einzelne Verzeichnisse auf bestimmte Teilnehmer beschränkt werden.
 
 Anwendung|Beschreibung
- - | -
+ --- | ---
 $ pass init user@mydomain.de|(Bitte die Schlüssel ID verwenden)
 $ pass init user@mydomain.de user@work.com|Zwei Schlüssel vorhanden (Privat und Arbeit)
 $ pass init -p /share/ user@work.com kollege@work.com|Verzeichnis teilen oder einschränken
@@ -109,9 +109,11 @@ pass git push --set-upstream --all
 Jetzt kann das Repository mit den Befehlen (»pass git push«), oder (»pass git pull«) synchronisiert werden. »push« schiebt die lokalen Änderungen an den Host und »pull« zieht den neusten Stand vom Host an das lokale Repository. Im Alltag wird der User kaum mehr als diese beiden Git-Befehle benötigen. Unter der Haube kümmert sich pass um den commit, beim erzeugen eines neuen oder das ändern eines bereits vorhandenen Kennworteintrages. Git erlaubt natürlich auch das verifizieren der Signaturen (Abbildung 2). Und wer sich die Frage stellt: "Wie lange ist dieses Kennwort schon in Gebrauch ?". Der bekommt einen Überblick mit »git log« (Abbildung 3).
 
 ![Screencast](a2.png)
+
 **Abbildung 2:** Signaturen verifizieren. Zwei Beispiele.
 
 ![Screencast](a3.png)
+
 **Abbildung 3:** Obsoleszenz. Wie lange ist dieses Passwort schon in Gebrauch?
 
 Möchte der Anwender seine Passwörter auf einem neu installiertem System nutzen, dann bietet Ihm Git die Möglichkeit das Archiv zu klonen mit »git clone«. Der Anwender sollte vorher den privaten Schlüssel importieren.
